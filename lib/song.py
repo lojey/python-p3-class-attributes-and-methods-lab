@@ -1,4 +1,4 @@
- class Song:
+class Song:
     count = 0
     genres = []
     artists = []
@@ -10,16 +10,11 @@
         self.artist = artist
         self.genre = genre
 
-        
-        Song.add_song_to_count()
-        
-        
-        Song.add_to_genres(genre)
-        Song.add_to_artists(artist)
-        
-        
-        Song.add_to_genre_count(genre)
-        Song.add_to_artist_count(artist)
+        self.add_song_to_count()
+        self.add_to_genres(genre)
+        self.add_to_artists(artist)
+        self.add_to_genre_count(genre)
+        self.add_to_artist_count(artist)
 
     @classmethod
     def add_song_to_count(cls):
@@ -48,10 +43,4 @@
             cls.artist_count[artist] += 1
         else:
             cls.artist_count[artist] = 1
-
-
-
- ninety_nine_problems = Song("99 Problems", "Jay-Z", "Rap")
- another_song = Song("Hotline Bling", "Drake", "Rap")
- third_song = Song("Halo", "Beyonce", "Pop")
 
